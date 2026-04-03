@@ -1,0 +1,167 @@
+.burgerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  /* Адаптивные размеры вместо фиксированных */
+  width: clamp(44px, 10vw, 60px);
+  height: clamp(44px, 10vw, 60px);
+  margin: clamp(4px, 1vw, 8px);
+  /* Для лучшей тактильной обратной связи */
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  /* Адаптивные отступы для touch target */
+  padding: clamp(8px, 2vw, 12px);
+  /* Плавные переходы для интерактива */
+  transition: background-color 0.2s ease;
+}
+
+/* Hover/active состояния для touch-устройств */
+.burger:hover,
+.burger:active {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.bar {
+  display: flex;
+  /* Адаптивная ширина и высота через clamp */
+  width: clamp(24px, 6vw, 40px);
+  height: clamp(3px, 0.8vw, 5px);
+  margin: clamp(2px, 0.5vw, 4px) 0;
+  background-color: #141414;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  transition-delay: calc((var(--n, 1) - 1) * 0.05s);
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 360px) {
+  .burger {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+  }
+  
+  .bar {
+    width: 22px;
+    height: 3px;
+    margin: 2px 0;
+  }
+}
+
+/* Адаптация для планшетов (можно оставить стандартные размеры) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .burger {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .bar {
+    width: 28px;
+  }
+}
+
+.bar:nth-child(3) {
+  --n: 1;
+}
+
+.bar:nth-child(2) {
+  --n: 2;
+}
+
+.bar:nth-child(1) {
+  --n: 3;
+}
+
+.burgerContainer:hover .bar {
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 1000px;
+}
+
+.burgerContainer:hover .bar:nth-child(1) {
+  animation: a6-1-in 0.5s forwards 0.6s;
+}
+
+.burgerContainer:hover .bar:nth-child(2) {
+  animation: a6-2-in 0.5s forwards 0.4s;
+}
+
+.burgerContainer:hover .bar:nth-child(3) {
+  animation: a6-3-in 0.5s forwards 0.2s;
+}
+
+@keyframes a6-1-in {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  20% {
+    transform: translateY(40px) translateX(0);
+  }
+  50% {
+    transform: translateY(30px) translateX(-5px);
+  }
+  70% {
+    transform: translateY(40px) translateX(-10px);
+  }
+  90% {
+    transform: translateY(35px) translateX(-14px);
+  }
+  100% {
+    transform: translateY(40px) translateX(-18px);
+  }
+}
+
+@keyframes a6-2-in {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  20% {
+    transform: translateY(29px) translateX(0);
+  }
+  50% {
+    transform: translateY(22px) translateX(2px);
+  }
+  70% {
+    transform: translateY(29px) translateX(4px);
+  }
+  90% {
+    transform: translateY(27px) translateX(6px);
+  }
+  100% {
+    transform: translateY(29px) translateX(8px);
+  }
+}
+
+@keyframes a6-3-in {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  20% {
+    transform: translateY(18px) translateX(6px);
+  }
+  50% {
+    transform: translateY(13px) translateX(8px);
+  }
+  70% {
+    transform: translateY(18px) translateX(10px);
+  }
+  90% {
+    transform: translateY(15px) translateX(13px);
+  }
+  100% {
+    transform: translateY(18px) translateX(15px);
+  }
+}

@@ -1,0 +1,128 @@
+/* Сброс и базовые стили */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* Плавное изменение размера шрифта при масштабировании */
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  
+  /* Плавная прокрутка */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  
+  /* Оптимизация для мобильных */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Типографика */
+h1, .h1 {
+  font-size: var(--text-4xl);
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+}
+
+h2, .h2 {
+  font-size: var(--text-3xl);
+  line-height: 1.25;
+  margin-bottom: var(--space-3);
+}
+
+h3, .h3 {
+  font-size: var(--text-2xl);
+  line-height: 1.3;
+  margin-bottom: var(--space-2);
+}
+
+h4, .h4 {
+  font-size: var(--text-xl);
+  line-height: 1.4;
+  margin-bottom: var(--space-2);
+}
+
+p {
+  margin-bottom: var(--space-4);
+}
+
+/* Контейнер */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
+}
+
+/* SM: 640px */
+@media (min-width: 640px) {
+  :root {
+    font-size: 16.5px; /* Небольшое увеличение базового размера */
+    --container-max-width: 640px;
+    --container-padding: 1.5rem;
+  }
+}
+
+/* MD: 768px */
+@media (min-width: 768px) {
+  :root {
+    font-size: 17px;
+    --container-max-width: 768px;
+    --container-padding: 2rem;
+  }
+  
+  /* Немного увеличиваем отступы на планшетах */
+  h1, .h1 {
+    margin-bottom: var(--space-5);
+  }
+  
+  h2, .h2 {
+    margin-bottom: var(--space-4);
+  }
+  
+  p {
+    margin-bottom: var(--space-5);
+  }
+}
+
+/* LG: 1024px */
+@media (min-width: 1024px) {
+  :root {
+    font-size: 17.5px;
+    --container-max-width: 1024px;
+    --container-padding: 2rem;
+  }
+}
+
+/* XL: 1280px */
+@media (min-width: 1280px) {
+  :root {
+    font-size: 18px;
+    --container-max-width: 1280px;
+    --container-padding: 2.5rem;
+  }
+}
+
+/* 2XL: 1536px */
+@media (min-width: 1536px) {
+  :root {
+    font-size: 18.5px;
+    --container-max-width: 1536px;
+    --container-padding: 3rem;
+  }
+}
