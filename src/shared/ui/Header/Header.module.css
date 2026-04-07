@@ -1,14 +1,40 @@
-.header {
+.mobileHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 50vh;
+}
+
+.headerTitle {
+  max-height: 20vh;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  box-shadow: 2px 2px 8px rgba(128, 128, 128, 0.4);
+  padding-inline: 5px;
 }
 
-.address {}
+.address {
+  text-align: center;
+}
 
-.address_link {}
+.desktopHeader {
+  display: none;
+}
 
-.address_place {}
+.address_link {
+  text-decoration: none;
+  color: black;
+}
 
-.burger{}
+.address_link:hover {
+  color: blue;
+}
+
+.address_place {
+}
+
+.burger {
+}

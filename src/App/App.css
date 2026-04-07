@@ -1,7 +1,8 @@
 .app {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  
+  padding: 5px;
   transition:
     background-color var(--transition-default),
     color var(--transition-default);

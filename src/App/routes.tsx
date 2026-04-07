@@ -1,13 +1,14 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { MainLayout } from './layouts';
+import { MainPage } from '../pages';
 //import {} from '../pages';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <MainLayout />,
-    /*children: [
-      { index: true, element: <CatalogPage /> },
+    children: [
+      { index: true, element: <MainPage /> }/*,
       { path: 'about', element: <CatalogPage /> },
       { path: 'offer/:id', element: <OfferPage /> },
       { path: 'skills', element: <SkillsPage /> },
@@ -21,7 +22,7 @@ export const router = createBrowserRouter([
       },
       { path: '404', element: <NotFoundPage /> },
       { path: '500', element: <Error500Page /> },
-      { path: '*', element: <Navigate to="/404" replace /> },
-    ],*/
+      { path: '*', element: <Navigate to="/404" replace /> },*/
+    ],
   },
 ]);
