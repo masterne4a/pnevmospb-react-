@@ -10,7 +10,7 @@ function MainLayoutContent(): ReactNode{
   return(
     <div className={styles.layout}>
       <HeaderUI />
-      <main>
+      <main className={styles.main}>
         <Outlet />
       </main>
       <FooterUI />

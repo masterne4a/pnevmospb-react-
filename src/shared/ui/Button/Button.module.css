@@ -1,0 +1,24 @@
+.button {
+  background-color: var(--button-color-main);
+  color: var(--button-color);
+  width: 80vw;
+}
+
+.button--small {
+  border-radius: var(--button-radius-s);
+  font-size: var(--text-lg);
+}
+
+.button--medium {
+border-radius: var(--button-radius-m);
+}
+
+.button--large {
+border-radius: var(--button-radius-l);
+}
+
+.button--primary {
+  border: none;
+  height: 10vh;
+  text-align: center;
+}

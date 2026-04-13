@@ -6,9 +6,9 @@
 .mobileFooter {
   display: flex;
   flex-direction: column;
-  background-color: rgba(128, 128, 128, 0.05);
+  background-color: var(--color-primary);
   text-align: center;
-  box-shadow: 2px 2px 8px rgba(128, 128, 128, 0.4);
+  box-shadow: 2px 2px 8px var(--shadow-color);
 }
 
 .address {
@@ -18,5 +18,5 @@
 
 .address__link {
   text-decoration: none;
-  color: black;
+  color: var(--color-text);
 }
